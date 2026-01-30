@@ -1,4 +1,4 @@
-:root{
+:root {
     --background-color: #C5E4E7;
 
     --main-title: #3D6666;
@@ -9,11 +9,12 @@
 
     --input-title-color: #5E7A7D;
     --input-color: #F3F9FA;
+    --input-placeholder-color: #9EBBBD;
     --input-number-color: #00474B;
     --input-active-border-color: #26C2AE;
     --input-error-color: #E17052;
 
-    --tip-title-color:  #5E7A7D;
+    --tip-title-color: #5E7A7D;
     --tip-button-color: #00474B;
     --tip-button-text-color: #FFFFFF;
     --tip-button-active-color: #26C2AE;
@@ -24,8 +25,7 @@
     --tip-custom-button-text-color: #547878;
 
     --calculation-card-background: #085C61;
-    --calculation-primary-text-color: #FFFFFF
-    --calculation-secondary-text-color: #7F9D9F;
+    --calculation-primary-text-color: #FFFFFF --calculation-secondary-text-color: #7F9D9F;
     --calculation-number-color: #26C2AE;
     --calculation-button-color: #26C2AE;
     --calculation-button-text-color: #00474B;
@@ -34,37 +34,37 @@
 }
 
 
-.text-preset-1{
+.text-preset-1 {
     font-size: 4.8rem;
     line-height: 7.1rem;
     letter-spacing: -0.1rem;
 }
 
-.text-preset-2{
+.text-preset-2 {
     font-size: 3.2rem;
     line-height: 4.7rem;
     letter-spacing: -0.067rem;
 }
 
-.text-preset-3{
+.text-preset-3 {
     font-size: 2.4rem;
     line-height: 3.6rem;
     letter-spacing: 0;
 }
 
-.text-preset-4{
+.text-preset-4 {
     font-size: 2rem;
     line-height: 3rem;
     letter-spacing: 0;
 }
 
-.text-preset-5{
+.text-preset-5 {
     font-size: 1.6rem;
     line-height: 2.4rem;
     letter-spacing: 0;
 }
 
-.text-preset-6{
+.text-preset-6 {
     font-size: 1.3rem;
     line-height: 1.9rem;
     letter-spacing: 0;
@@ -74,18 +74,148 @@
 
 
 
-body{
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     min-height: 100dvh;
+    gap: 4rem;
+
     background-color: var(--background-color);
 }
 
+.logo {
+    margin-top: 5rem;
+}
 
-.main-container{
+.main-container {
     display: flex;
     flex-direction: column;
 
     background-color: var(--container);
 
-    padding: 3.2rem 2.4rem;
+    width: 100%;
 
+    padding: 3.2rem 2.4rem;
+    gap: 3.2rem;
+
+    border-radius: 2.5rem 2.5rem 0 0;
+}
+
+.tip-section {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3.2rem;
+
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+}
+
+.tip-section__input-container {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.8rem;
+}
+
+.tip-section__input-container__title-error-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tip-section__input-container__title {
+    color: var(--input-title-color);
+}
+
+.tip-section__input-container__error {
+    color: var(--input-error-color);
+}
+
+.tip-section__input-container__input {
+    background-color: var(--input-color);
+
+    border: none;
+    border-radius: 0.5rem;
+
+    padding: 0.8rem 1.6rem;
+
+    text-align: right;
+
+}
+
+.tip-section__input-container__input--bill-icon {
+    background-image: url('../images/icon-dollar.svg');
+    background-repeat: no-repeat;
+    background-position: 1.8rem center;
+}
+
+.tip-section__input-container__input--people-icon {
+    background-image: url('../images/icon-person.svg');
+    background-repeat: no-repeat;
+    background-position: 1.8rem center;
+}
+
+.tip-section__input-container__input::placeholder {
+    color: var(--input-placeholder-color);
+}
+
+.tip-section__buttons-container {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.8rem;
+}
+
+.tip-section__buttons-container__title {
+    color: var(--tip-title-color);
+}
+
+.tip-section__buttons-container__buttons {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+    gap: 1.6rem;
+}
+
+.tip-section__buttons-container__buttons__button {
+    height: 4.8rem;
+
+    background-color: var(--tip-button-color);
+    color: var(--tip-button-text-color);
+
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.tip-section__buttons-container__buttons__button:hover {
+    background-color: var(--tip-button-active-color);
+    color: var(--tip-button-active-text-color);
+
+    cursor: pointer;
+}
+
+.tip-section__buttons-container__buttons--custom-button {
+    background-color: var(--tip-custom-button-color);
+    color: var(--tip-custom-button-text-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hidden{
+    display: none;
 }
