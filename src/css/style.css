@@ -1,0 +1,35 @@
+:root{
+    --background-color: #C5E4E7;
+
+    --main-title: #3D6666;
+
+    --card: #FFFFFF;
+
+    --svg-icons-color: #9EBBBD;
+
+    --input-title-color: #5E7A7D;
+    --input-color: #F3F9FA;
+    --input-number-color: #00474B;
+    --input-active-border-color: #26C2AE;
+    --input-error-color: #E17052;
+
+    --tip-title-color:  #5E7A7D;
+    --tip-button-color: #00474B;
+    --tip-button-text-color: #FFFFFF;
+    --tip-button-active-color: #26C2AE;
+    --tip-button-active-text-color: #00474B;
+    --tip-button-hover-color: #9FE8DF;
+
+    --tip-custom-button-color: #F3F9FA;
+    --tip-custom-button-text-color: #547878;
+
+    --calculation-card-background: #085C61;
+    --calculation-primary-text-color: #FFFFFF
+    --calculation-secondary-text-color: #7F9D9F;
+    --calculation-number-color: #26C2AE;
+    --calculation-button-color: #26C2AE;
+    --calculation-button-text-color: #00474B;
+    --calculation-button-hover-color: #9FE8DF;
+    --calculation-button-empty-color: #0D686D;
+}
+
