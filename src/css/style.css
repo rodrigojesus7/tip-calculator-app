@@ -24,13 +24,14 @@
     --tip-custom-button-color: #F3F9FA;
     --tip-custom-button-text-color: #547878;
 
-    --calculation-card-background: #085C61;
-    --calculation-primary-text-color: #FFFFFF --calculation-secondary-text-color: #7F9D9F;
-    --calculation-number-color: #26C2AE;
-    --calculation-button-color: #26C2AE;
-    --calculation-button-text-color: #00474B;
-    --calculation-button-hover-color: #9FE8DF;
-    --calculation-button-empty-color: #0D686D;
+    --result-section-background: #085C61;
+    --result-primary-text-color: #FFFFFF;
+    --result-secondary-text-color: #7F9D9F;
+    --result-number-color: #26C2AE;
+    --result-button-color: #26C2AE;
+    --result-button-text-color: #00474B;
+    --result-button-hover-color: #9FE8DF;
+    --result-button-empty-color: #0D686D;
 }
 
 
@@ -216,6 +217,6 @@ body {
 
 
 
-.hidden{
+.hidden {
     display: none;
 }
