@@ -24,7 +24,7 @@
     --tip-custom-button-color: #F3F9FA;
     --tip-custom-button-text-color: #547878;
 
-    --result-section-background: #085C61;
+    --result-section-background-color: #00474B;
     --result-primary-text-color: #FFFFFF;
     --result-secondary-text-color: #7F9D9F;
     --result-number-color: #26C2AE;
@@ -136,14 +136,21 @@ body {
 
 .tip-section__input-container__input {
     background-color: var(--input-color);
+    color: var(--input-number-color);
 
-    border: none;
+    border: solid 0.3rem transparent;
     border-radius: 0.5rem;
 
     padding: 0.8rem 1.6rem;
 
     text-align: right;
 
+    cursor: pointer;
+}
+
+.tip-section__input-container__input:focus{
+    outline: none;
+    border: solid 0.3rem var(--input-active-border-color);
 }
 
 .tip-section__input-container__input--bill-icon {
@@ -190,13 +197,13 @@ body {
 
     border: none;
     border-radius: 0.5rem;
+
+    cursor: pointer;
 }
 
 .tip-section__buttons-container__buttons__button:hover {
     background-color: var(--tip-button-active-color);
     color: var(--tip-button-active-text-color);
-
-    cursor: pointer;
 }
 
 .tip-section__buttons-container__buttons--custom-button {
@@ -206,15 +213,91 @@ body {
 
 
 
+.result-section{
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--result-section-background-color);
+
+    border-radius: 1.5rem;
+
+    padding: 2.4rem;
+
+    gap: 3.2rem;
+}
+
+.result-section__results{
+    display: flex;
+    flex-direction: column;
+
+    gap: 2.4rem;
+}
+
+
+.result-section__results__tip-section{
+    display: flex;
+    justify-content: space-between;
+}
+
+.result-section__results__tip-section__text{
+    display: flex;
+    flex-direction: column;
+}
+
+.result-section__results__tip-section__text__primary{
+    color: var(--result-primary-text-color);
+}
+
+.result-section__results__tip-section__text__secondary{
+    color: var(--result-secondary-text-color);
+}
+
+.result-section__results__tip-section__value{
+    color: var(--result-number-color);
+}
 
 
 
+.result-section__results__total-section{
+    display: flex;
+    justify-content: space-between;
+}
+
+.result-section__results__total-section__text{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.result-section__results__total-section__text__primary{
+    color: var(--result-primary-text-color);
+}
+
+.result-section__results__total-section__text__secondary{
+    color: var(--result-secondary-text-color);
+}
+
+.result-section__results__total-section__value{
+    color: var(--result-number-color);
+}
 
 
 
+.result-section__button{
+    height: 4.8rem;
 
+    background-color: var(--result-button-empty-color);
+    color: var(--result-button-text-color);
 
+    border: none;
+    border-radius: 0.5rem;
 
+    cursor: pointer;
+}
+
+.result-section__button:hover {
+    background-color: var(--tip-button-active-color);
+}
 
 
 .hidden {
