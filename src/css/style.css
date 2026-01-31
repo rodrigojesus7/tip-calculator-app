@@ -229,7 +229,7 @@ body {
 .result-section__results{
     display: flex;
     flex-direction: column;
-
+    
     gap: 2.4rem;
 }
 
@@ -237,6 +237,7 @@ body {
 .result-section__results__tip-section{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .result-section__results__tip-section__text{
@@ -261,6 +262,7 @@ body {
 .result-section__results__total-section{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .result-section__results__total-section__text{
