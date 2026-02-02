@@ -52,7 +52,8 @@
             <div class="tip-section__input-container">
                 <div class="tip-section__input-container__title-error-container">
                     <label class="text-preset-5 tip-section__input-container__title" for="people-number-input">Number of People</label>
-                    <p class="text-preset-5 hidden tip-section__input-container__error">Can’t be zero</p>
+                    <p class="text-preset-5 hidden tip-section__input-container__error" id="zero-error">Can’t be zero</p>
+                    <p class="text-preset-5 hidden tip-section__input-container__error" id="negative-error">Can’t be negative</p>
                 </div>
                 <input class="text-preset-3 tip-section__input-container__input tip-section__input-container__input--people-icon" type="number" id="people-number-input" placeholder="0">
             </div>
@@ -82,6 +83,7 @@
             <button class="text-preset-4 result-section__button">RESET</button>
 
 
+            <script src="./src/js/index.js"></script>
         </section>
 
     </main>

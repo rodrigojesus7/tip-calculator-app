@@ -132,6 +132,7 @@ body {
 
 .tip-section__input-container__error {
     color: var(--input-error-color);
+    text-align: right;
 }
 
 .tip-section__input-container__input {
