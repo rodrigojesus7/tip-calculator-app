@@ -1,6 +1,6 @@
 @media (min-width: 48rem) {
 
-    body{
+    body {
         align-items: center;
         justify-content: center;
     }
@@ -22,27 +22,67 @@
 
     .tip-section__buttons-container__buttons {
         display: grid;
-    
+
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
     }
 
-    .result-section{
+    .result-section {
         padding: 4.3rem 4.75rem;
-    
+
         gap: 1.6rem;
     }
 
-    .result-section__results__tip-section__value{
+    .result-section__results__tip-section__value {
         font-size: 4.8rem;
         line-height: 7.1rem;
         letter-spacing: -0.1rem;
     }
 
-    .result-section__results__total-section__value{
+    .result-section__results__total-section__value {
         font-size: 4.8rem;
         line-height: 7.1rem;
         letter-spacing: -0.1rem;
     }
 }
 
+
+
+
+@media (min-width: 90rem) {
+
+    body{
+        gap: 8.7rem;
+    }
+
+    .logo {
+        margin-top: 0;
+    }
+
+    .main-container {
+        width: auto;
+
+        flex-direction: row;
+        
+        gap: 4.8rem;
+        padding: 3.2rem;
+    }
+
+    .tip-section{
+        justify-content: center;
+
+        margin: 1.65rem auto;
+
+        gap: 4rem;
+
+        min-width: 37.9rem;
+    }
+
+    .result-section{
+        justify-content: space-between;
+    }
+
+    .result-section__button{
+        min-width: 33.3rem;
+    }
+}
