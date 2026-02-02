@@ -3,7 +3,11 @@ const resetButton = document.querySelector('.result-section__button')
 const billInput = document.querySelector('#bill-input')
 const peopleInput = document.querySelector('#people-number-input')
 const zeroErrorText = document.querySelector('#zero-error')
-const negativeErrorText = document.querySelector('#negative-error')
+const billNegativeErrorText = document.querySelector('#bill-negative-error')
+const peopleNegativeErrorText = document.querySelector('#people-negative-error')
+
+const totalTip = document.querySelector('.result-section__results__tip-section__value')
+const totalValuePerPerson = document.querySelector('.result-section__results__tip-section__value')
 
 peopleInput.addEventListener('input', function () {
     let valueAsNumber = Number(peopleInput.value)
@@ -15,8 +19,18 @@ peopleInput.addEventListener('input', function () {
     }
 
     if (valueAsNumber < 0) {
-        negativeErrorText.classList.remove('hidden')
+        peopleNegativeErrorText.classList.remove('hidden')
     } else {
-        negativeErrorText.classList.add('hidden')
+        peopleNegativeErrorText.classList.add('hidden')
+    }
+})
+
+billInput.addEventListener('input', function () {
+    let valueAsNumber = Number(billInput.value)
+
+    if (valueAsNumber < 0) {
+        billNegativeErrorText.classList.remove('hidden')
+    } else {
+        billNegativeErrorText.classList.add('hidden')
     }
 })
