@@ -57,7 +57,7 @@ function calculation() {
     let bill = Number(billInput.value)
     let people = Number(peopleInput.value)
 
-    if (bill != 0 && bill > 0) {
+    if (bill != 0 && bill > 0 && people != 0 && people > 0) {
         let totalTip = (bill * (selectedPercentage / 100))
         totalTipPerPerson.textContent = (totalTip / people).toFixed(2)
 
@@ -86,4 +86,18 @@ tipButtons.forEach(function (number) {
         calculation()
     })
 
+})
+
+
+resetButton.addEventListener('click', function(){
+
+    tipButtons.forEach(function (button) {
+        button.classList.remove('active-button')
+    })
+
+    billInput.value = ''
+    peopleInput.value = ''
+
+    totalTipPerPerson.textContent = '0.00'
+    totalValuePerPerson.textContent = '0.00'
 })
