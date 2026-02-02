@@ -21,6 +21,10 @@ billInput.addEventListener('input', function () {
         billNegativeErrorText.classList.add('hidden')
     }
 
+    if (selectedPercentage != 0) {
+        calculation()
+    }
+
 })
 
 
@@ -39,27 +43,47 @@ peopleInput.addEventListener('input', function () {
         peopleNegativeErrorText.classList.add('hidden')
     }
 
+    if (selectedPercentage != 0) {
+        calculation()
+    }
+
+
 })
 
 
 
-function calculation(){
-    let totalTip = billInput.value * (selectedPercentage / 100)
-    totalTipPerPerson.textContent = totalTip.toFixed(2)
+function calculation() {
 
-    let totalPerPerson = (Number(billInput.value) + Number(totalTip)) / peopleInput.value
-    totalValuePerPerson.textContent = totalPerPerson.toFixed(2)
+    let bill = Number(billInput.value)
+    let people = Number(peopleInput.value)
+
+    if (bill != 0 && bill > 0) {
+        let totalTip = (bill * (selectedPercentage / 100))
+        totalTipPerPerson.textContent = (totalTip / people).toFixed(2)
+
+        let totalPerPerson = (bill + totalTip) / people
+        totalValuePerPerson.textContent = totalPerPerson.toFixed(2)
+    } else {
+        return
+    }
+
+
 }
 
 
-percentageNumbers.forEach(function (number){
+tipButtons.forEach(function (number) {
 
-    number.addEventListener('click', function(){
-        selectedPercentage = Number(number.textContent)
+    number.addEventListener('click', function () {
+        selectedPercentage = Number(number.textContent.replace('%', ''))
 
-        if (billInput.value != 0 && billInput.value > 0){
-            calculation()
-        }
+        tipButtons.forEach(function (button) {
+            button.classList.remove('active-button')
+        })
+
+        number.classList.add('active-button')
+
+
+        calculation()
     })
 
 })

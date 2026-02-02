@@ -217,6 +217,10 @@ body {
     color: var(--tip-custom-button-text-color);
 }
 
+.active-button{
+    background-color: var(--tip-button-active-color);
+    color: var(--tip-button-active-text-color);
+}
 
 
 
