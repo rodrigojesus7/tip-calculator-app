@@ -200,14 +200,11 @@ body {
     border-radius: 0.5rem;
 
     cursor: pointer;
+
+    transition: 0.2s ease-in-out;
 }
 
 .tip-section__buttons-container__buttons__button:hover {
-    background-color: var(--tip-button-active-color);
-    color: var(--tip-button-active-text-color);
-}
-
-.tip-section__buttons-container__buttons__button:focus {
     background-color: var(--tip-button-active-color);
     color: var(--tip-button-active-text-color);
 }
@@ -307,6 +304,8 @@ body {
     border-radius: 0.5rem;
 
     cursor: pointer;
+
+    transition: 0.2s ease-in-out;
 }
 
 .result-section__button:hover {

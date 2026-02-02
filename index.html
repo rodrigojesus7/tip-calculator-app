@@ -34,6 +34,7 @@
             <div class="tip-section__input-container">
                 <div class="tip-section__input-container__title-error-container">
                     <label class="text-preset-5 tip-section__input-container__title" for="bill-input">Bill</label>
+                    <p class="text-preset-5 hidden tip-section__input-container__error" id="bill-zero-error">Can’t be zero</p>
                     <p class="text-preset-5 hidden tip-section__input-container__error" id="bill-negative-error">Can’t be negative</p>
                 </div>
                 <input class="text-preset-3 tip-section__input-container__input tip-section__input-container__input--bill-icon" type="number" id="bill-input" placeholder="0">
@@ -55,8 +56,9 @@
             <div class="tip-section__input-container">
                 <div class="tip-section__input-container__title-error-container">
                     <label class="text-preset-5 tip-section__input-container__title" for="people-number-input">Number of People</label>
-                    <p class="text-preset-5 hidden tip-section__input-container__error" id="zero-error">Can’t be zero</p>
+                    <p class="text-preset-5 hidden tip-section__input-container__error" id="people-zero-error">Can’t be zero</p>
                     <p class="text-preset-5 hidden tip-section__input-container__error" id="people-negative-error">Can’t be negative</p>
+                    <p class="text-preset-5 hidden tip-section__input-container__error" id="not-that-many-people-error">Really? 🤨</p>
                 </div>
                 <input class="text-preset-3 tip-section__input-container__input tip-section__input-container__input--people-icon" type="number" id="people-number-input" placeholder="0">
             </div>
