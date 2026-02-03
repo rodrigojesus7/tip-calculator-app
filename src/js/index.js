@@ -8,6 +8,7 @@ const zeroPeopleErrorText = document.querySelector('#people-zero-error')
 const billNegativeErrorText = document.querySelector('#bill-negative-error')
 const peopleNegativeErrorText = document.querySelector('#people-negative-error')
 const manyPeopleErrorText = document.querySelector('#not-that-many-people-error')
+const customButton = document.querySelector('.tip-section__buttons-container__buttons--custom-button')
 
 const totalTipPerPerson = document.querySelector('#total-tip-value')
 const totalValuePerPerson = document.querySelector('#total-per-person')
@@ -51,9 +52,9 @@ peopleInput.addEventListener('input', function () {
         peopleNegativeErrorText.classList.add('hidden')
     }
 
-    if(people >= 999){
+    if (people >= 999) {
         manyPeopleErrorText.classList.remove('hidden')
-    } else{
+    } else {
         manyPeopleErrorText.classList.add('hidden')
     }
 
@@ -88,16 +89,38 @@ function calculation() {
 tipButtons.forEach(function (number) {
 
     number.addEventListener('click', function () {
-        selectedPercentage = Number(number.textContent.replace('%', ''))
 
-        tipButtons.forEach(function (button) {
-            button.classList.remove('active-button')
-        })
+        if (number.textContent === 'Custom') {
 
-        number.classList.add('active-button')
+            let bill = Number(billInput.value)
+            let people = Number(peopleInput.value)
+
+            if (bill != 0 && bill > 0 && people != 0 && people > 0 && people < 999) {
+
+                tipButtons.forEach(function (button) {
+                    button.classList.remove('active-button')
+                })
+
+                number.classList.add('active-button')
+
+                totalTipPerPerson.textContent = '⚠️🫣'
+                totalValuePerPerson.textContent = '⚠️🫣'
+            }
+
+        } else {
+            selectedPercentage = Number(number.textContent.replace('%', ''))
+
+            tipButtons.forEach(function (button) {
+                button.classList.remove('active-button')
+            })
+
+            number.classList.add('active-button')
 
 
-        calculation()
+            calculation()
+        }
+
+
     })
 
 })
@@ -125,6 +148,6 @@ function reset() {
 
 }
 
-resetButton.addEventListener('click', function(){
+resetButton.addEventListener('click', function () {
     reset()
 })
